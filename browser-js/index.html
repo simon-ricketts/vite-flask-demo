@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/vue.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/style.css" rel="stylesheet" />
+    <!-- Vue.js: library (runtime and compiler for Vue framework) -->
+    <script src="https://unpkg.com/vue@2.7.0/dist/vue.js"></script>
+    <!-- http-vue-loader: load .vue files without node.js or build steps -->
+    <script src="https://unpkg.com/http-vue-loader@1.4.2/src/httpVueLoader.js"></script>
+    <!-- axios: promise based HTTP client -->
+    <script src="https://unpkg.com/axios@0.22.0/dist/axios.min.js"></script>
+    <title>Browser JS + Vue</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <a href="https://vuejs.org/" target="_blank">
+        <img src="src/assets/vue.svg" class="logo vue" alt="Vue logo" />
+      </a>
+      <hello-world msg="Browser JS + Vue"></hello-world>
+    </div>
+    <script>
+      // Vue app
+      new Vue({
+        name: "BrowserJsDemo",
+        el: "#app",
+        components: {
+          HelloWorld: httpVueLoader("src/components/HelloWorld.vue"),
+        },
+      });
+    </script>
+  </body>
+</html>
+
+<style>
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.vue:hover {
+    filter: drop-shadow(0 0 2em #42b883aa);
+  }
+  </style>

@@ -1,0 +1,23 @@
+{
+  "name": "vite-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "eslint": "eslint --ext vue src/ ../browser-js/src"
+  },
+  "dependencies": {
+    "axios": "1.3.1",
+    "vue": "2.7.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue2": "2.2.0",
+    "eslint": "5.16.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-vue": "6.1.0",
+    "vite": "4.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+# Flask files
+venv
+
+# Vite files
+node_modules
+dist

@@ -1,0 +1,26 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/strongly-recommended",
+        "plugin:prettier/recommended",
+        "prettier/vue"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "plugins": [
+        "prettier",
+        "vue"
+    ],
+    "rules": {
+        "camelcase": ["error", { "properties": "never" }],
+        "no-console": "off",
+        "vue/camelcase": ["error", { "properties": "never" }],
+        "vue/this-in-template": ["error", "never"],
+        "vue/require-name-property": ["error"]
+    }
+}
