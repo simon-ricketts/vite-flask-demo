@@ -1,10 +1,16 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue2";
 import path from "path";
+import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), visualizer()],
+  build: {
+    rollupOptions: {
+      treeshake: false,
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -12,6 +12,7 @@
 
 <script>
 import axios from "axios";
+import * as _ from "lodash-es";
 
 export default {
   name: "HelloWorld",
@@ -26,7 +27,9 @@ export default {
   methods: {
     fetchCurrentTime() {
       axios.get("/api/time/current").then((resp) => {
-        this.currentTime = resp.data.current_time;
+        if (!_.isEmpty(resp.data)) {
+          this.currentTime = resp.data.current_time;
+        }
       });
     },
   },
